@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BlueSprinkler</string>
+
+    <!-- Bluetooth LE -->
+    <string name="ble_not_supported">この端末は Bluetooth LE に対応していません</string>
+    <string name="bt_unavailable">Bluetooth が OFF になっています</string>
+
+    <!-- Twitter -->
+    <string name="title_item_detail">Item Detail</string>
+    <string name="twitter_callback_url">blue-sprinkler://twitter</string>
+    <string name="twitter_consumer_key" /><!--TODO -->
+    <string name="twitter_consumer_secret" /><!--TODO -->
+    <string name="twitter_oauth">同意して Twitter 認証</string>
+
+</resources>

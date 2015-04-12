@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button_twitter_oauth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/twitter_oauth" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_twitter_oauth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="このアプリは、ユーザーの Twitter アカウント ID（固有の数字）を Bluetooth 電波で発信するアプリです。\n
+アカウント ID 以外は発信しません。\n
+Bluetooth 電波は最大で 100m 先まで届きます。\n
+\n
+このアプリの使用によって、あなたの Twitter アカウントを意図せぬ人物に知られる恐れがあります。\n
+\n
+同名の iPhone アプリとは互換性がありません。（次期アップデートで対応予定）\n
+\n
+このアプリによって起きたあらゆる不都合に対して、アプリ提供者は保証いたしかねます。" />
+    </ScrollView>
+
+</RelativeLayout>
