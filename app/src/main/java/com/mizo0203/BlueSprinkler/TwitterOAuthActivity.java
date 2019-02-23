@@ -1,21 +1,24 @@
 
 package com.mizo0203.BlueSprinkler;
 
-import twitter4j.IDs;
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.auth.AccessToken;
-import twitter4j.auth.RequestToken;
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.mytwitter.util.TwitterUtils;
-import com.mizo0203.BlueSprinkler.R;
+
+import twitter4j.IDs;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.auth.AccessToken;
+import twitter4j.auth.RequestToken;
 
 public class TwitterOAuthActivity extends Activity {
 
@@ -39,6 +42,13 @@ public class TwitterOAuthActivity extends Activity {
                 startAuthorize();
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // 権限がない場合はリクエスト
+                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            }
+        }
     }
 
     @Override
